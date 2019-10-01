@@ -3,7 +3,8 @@ const Delete = 'Delete'
 
 export const addnew = () => {
   return{
-    type : Add_New
+    type : Add_New,
+
   }
 }
 
