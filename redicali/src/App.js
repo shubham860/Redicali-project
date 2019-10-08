@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Form_input from './components/Form_input'
+import Form_input from './components/Form_input';
 
 function App() {
   return (
