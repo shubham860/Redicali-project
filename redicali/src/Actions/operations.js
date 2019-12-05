@@ -1,17 +1,14 @@
-const Add_New  = 'Add_New'
-const Delete = 'Delete'
+import {Add_New, Delete} from './Types';
 
-export const addnew = (title,description,duedate) => {
-  return{
-    type : Add_New,
-    title : title,
-    description : description,
-    duedate : duedate
-  }
+export const addNew = ({ip}) => {
+   return{
+     type : Add_New,
+     payload : {
+       ip
+     }
+   }
 }
 
 export const remove = () => {
-  return{
-    type : Delete
-  }
+    return {type : Delete}
 }
