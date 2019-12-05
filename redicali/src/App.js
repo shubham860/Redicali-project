@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Form_input from './components/Form_input';
+import FormInput from './components/FormInput';
 
 function App() {
   return (
     <div className="App">
-      <Form_input/>
+      <FormInput/>
     </div>
   );
 }

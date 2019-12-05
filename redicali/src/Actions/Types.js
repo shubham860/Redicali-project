@@ -1,2 +1,2 @@
-const Add_New  = 'Add_New'
-const Delete = 'Delete'
+export const Add_New  = 'Add_New'
+export const Delete = 'Delete'
