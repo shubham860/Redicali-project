@@ -9,12 +9,17 @@ class FormInput extends React.Component {
     this.state= {
       ip : ''
     }
+    this.myRef = React.createRef();
   }
 
   Inputhandler = (e) => {
     this.setState({
       ip : e.target.value
     })
+  }
+
+  componentDidMount(){
+    this.myRef.current.focus()
   }
 
 
@@ -26,7 +31,7 @@ btnHandler = () => {
   render () {
     return(
       <div>
-        <input type='text' onChange={this.Inputhandler}  value={this.state.ip}/>
+        <input type='text' onChange={this.Inputhandler} ref={this.myRef} value={this.state.ip}/>
         <button onClick={this.btnHandler}>Submit</button>
         {
           this.props.data.map(item => {
