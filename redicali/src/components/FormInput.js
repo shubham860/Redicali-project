@@ -24,7 +24,7 @@ class FormInput extends React.Component {
 
 
 btnHandler = () => {
-  this.props.onAdd(this.state)
+  this.props.dispatch(addNew(this.state))
   this.setState({ip:''})
 }
 
@@ -44,13 +44,13 @@ btnHandler = () => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onAdd : r => {
-      dispatch(addNew(r));
-    }
-  }
-}
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     onAdd : r => {
+//       dispatch(addNew(r));
+//     }
+//   }
+// }
 
 const mapStateToProps=(state)=>{
     return {
@@ -59,4 +59,4 @@ const mapStateToProps=(state)=>{
 }
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(FormInput);
+export default connect(mapStateToProps,null)(FormInput);
